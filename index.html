@@ -3,12 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Liz's Website</title>
+    <title>Cool Basic Website</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #1e1e2e;
+            color: white;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #3a3a4f;
+            padding: 20px;
+            font-size: 24px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 18px;
+            background-color: pink;
+            border: none;
+            color: grey;
+            cursor: help;
+            margin-top: 20px;
+            transition: background 0.3s;
+        }
+        button:hover {
+            background-color: purple;
+        }
+    </style>
 </head>
 <body>
-    <h1>
-        Hola Amigas!
-    </h1>
-    
+    <header>
+        Welcome to My Cool Website
+    </header>
+    <p>Click the button below to see some magic!</p>
+    <button onclick="showMessage()">Click Me</button>
+    <p id="message"></p>
+
+    <script>
+        function showMessage() {
+            document.getElementById("message").innerText = "Hello, World! You clicked the button!";
+        }
+    </script>
 </body>
 </html>
