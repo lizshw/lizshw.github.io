@@ -1,0 +1,19 @@
+body {
+  font-size: 1.1rem;
+  text-align: center;
+  background-color: powderblue;
+}
+
+h1 {
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+
+p {
+  width: 400px;
+  border: 1px solid blueviolet;
+  margin: 0 auto;
+  min-height: 200px;
+  /*padding: 30px 10px 50px 20px;*/
+  padding: 30px;
+}
