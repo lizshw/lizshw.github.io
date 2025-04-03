@@ -1,0 +1,87 @@
+body {
+  /* font-family: "Gasoek One", sans-serif; */
+  background-color: #000000;
+  color: #000000;
+  line-height: 1.6;
+  padding: 20px;
+}
+
+/* header {
+  text-align: center;
+  padding: 20px;
+  background: #ffa441;
+  border-radius: 10px;
+  font-family: "Gasoek One", sans-serif;
+  font-size: 2.5rem;
+  text-align: left;
+} */
+header {
+  display: flex;
+  justify-content: space-between; /* Aligns text to left and right */
+  align-items: center;
+  padding: 20px;
+  background: #ffa441;
+  border-radius: 10px;
+  font-family: "Gasoek One", sans-serif;
+  font-size: 2.5rem;
+  text-align: left;
+}
+
+.right-text {
+  margin-left: auto; /* Pushes text to the right */
+  color: #000000;
+  font-weight: bold;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 300;
+}
+
+h1 {
+  color: #000000;
+}
+
+main {
+  max-width: 800px;
+  margin: 20px auto;
+  background: #ffa441;
+  padding: 20px;
+  border-radius: 10px;
+  /* box-shadow: 0 0 10px rgba(255, 255, 255, 0.2); */
+}
+
+h2 {
+  border-bottom: 2px solid #000000;
+  padding-bottom: 5px;
+  margin-top: 20px;
+}
+
+a {
+  color: #ffa441;
+  /* text-decoration: none; */
+}
+
+/* a:hover {
+  text-decoration: underline;
+} */
+
+ul {
+  padding-left: 20px;
+}
+
+p,
+li {
+  font-size: 1.1rem;
+}
+
+/* @media (max-width: 600px) {
+  main {
+    padding: 10px;
+  }
+} */
+
+h2 {
+  font-size: 1.7rem;
+}
+
+h3 {
+  font-size: 1.4rem;
+}
