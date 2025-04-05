@@ -26,7 +26,6 @@ header {
 .right-text {
   margin-left: auto; /* Pushes the text all the way to the right */
   color: #000000; /* Black text for contrast against the orange */
-  font-weight: bold; /* Makes the author name bold */
   font-family: "Montserrat", sans-serif; /* Lighter font, more modern */
   font-weight: 300; /* Lighter weight for a softer look */
 }
@@ -46,7 +45,9 @@ h2 {
   border-bottom: 2px solid #000000; /* Thin black border to separate sections */
   padding-bottom: 5px; /* Space between the text and border */
   margin-top: 20px; /* Space above the heading */
-  font-size: 1.7rem; /* Slightly larger text for section titles */
+  font-family: "Gasoek One", serif; /* Same font as the title */
+  font-size: 2em; /* Adjust the font size to your preference */
+  color: #000000; /* Darker colour for better contrast */
 }
 
 /* Link styles */
@@ -64,11 +65,14 @@ ul {
 p,
 li {
   font-size: 1.1rem; /* Slightly bigger text for easier reading */
+  font-family: "Montserrat", sans-serif;
 }
 
 /* Heading 3 styles */
 h3 {
   font-size: 1.4rem; /* Smaller than h2 to show it’s a subheading */
+  color: #444; /* Slightly lighter for subheadings */
+  font-family: "Montserrat", sans-serif;
 }
 
 /*

@@ -60,58 +60,9 @@
     <p></p>
     <a href="https://lizshw.github.io/week4/">Go to Week 4</a>
     <p></p>
+    <a href="https://lizshw.github.io/Assignment/">Go to Assignment</a>
+    <p></p>
 
-    <button onclick="toggleRainbow()">Toggle Rainbow</button>
-    <p id="secretMessage" class="hidden">
-      🎉 Surprise! You unlocked the secret message! 🎉
-    </p>
-
-    <canvas id="coolCanvas" width="400" height="400"></canvas>
-
-    <script>
-      let rainbowActive = false;
-
-      function toggleRainbow() {
-        if (rainbowActive) {
-          document.body.style.background = "#1e1e2e";
-          document.body.style.animation = "none";
-          document.getElementById("secretMessage").classList.add("hidden");
-        } else {
-          document.body.style.background =
-            "linear-gradient(270deg, red, orange, yellow, green, cyan, blue, violet)";
-          document.body.style.backgroundSize = "400% 400%";
-          document.body.style.animation = "rainbow 6s infinite linear";
-          document.getElementById("secretMessage").classList.remove("hidden");
-        }
-        rainbowActive = !rainbowActive;
-      }
-
-      function drawCoolAnimation() {
-        const canvas = document.getElementById("coolCanvas");
-        const ctx = canvas.getContext("2d");
-        let angle = 0;
-
-        function animate() {
-          ctx.clearRect(0, 0, canvas.width, canvas.height);
-          ctx.fillStyle = `hsl(${angle}, 100%, 50%)`;
-          ctx.beginPath();
-          ctx.arc(
-            200,
-            200,
-            50 + Math.sin((angle * Math.PI) / 180) * 20,
-            0,
-            Math.PI * 2
-          );
-          ctx.fill();
-
-          angle += 5;
-          requestAnimationFrame(animate);
-        }
-        animate();
-      }
-
-      drawCoolAnimation();
-    </script>
     <img src="image2.jpg" width="500" height="600" />
   </body>
 </html>
