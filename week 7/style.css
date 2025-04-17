@@ -1,0 +1,29 @@
+video,
+audio {
+  display: block;
+  margin-bottom: 20px;
+}
+
+video {
+  width: 600px;
+  height: 400px;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+button {
+  padding: 20px;
+  font-size: 1.2rem;
+  border-radius: 12px;
+  margin-right: 12px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+button:hover {
+  transform: scale(2);
+}
