@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pomodoro Media Player</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <audio id="backgroundAudio" loop>
+    <source src="assets/studymusic.mov" type="audio/mp3" />
+  </audio>
+  <body>
+    <div class="container">
+      <!-- Video Player -->
+
+      <!-- <h1>Pomodoro Media Player</h1> -->
+      <video id="videoPlayer" loop muted playsinline>
+        <source src="assets/videoloop.mp4" type="video/mp4" />
+      </video>
+
+      <!-- Timer Display -->
+      <div class="timer-controls">
+        <div class="inputs">
+          <label for="focusInput">Focus (min):</label>
+          <input type="number" id="focusInput" value="25" min="1" />
+
+          <label for="breakInput">Break (min):</label>
+          <input type="number" id="breakInput" value="5" min="1" />
+        </div>
+
+        <div class="timer-display">
+          <h2 id="timer">25:00</h2>
+        </div>
+
+        <div class="buttons">
+          <button id="startStopBtn">Start</button>
+          <button id="skipBtn">Skip 10s</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
