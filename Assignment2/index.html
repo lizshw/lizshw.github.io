@@ -5,40 +5,51 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Pomodoro Media Player</title>
     <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
   </head>
-  <audio id="backgroundAudio" loop>
-    <source src="assets/studymusic.mov" type="audio/mp3" />
-  </audio>
   <body>
-    <div class="container">
-      <!-- Video Player -->
+    <!-- Background audio for ambience -->
+    <audio id="backgroundAudio" loop>
+      <source src="assets/studymusic.mov" type="audio/mp3" />
+    </audio>
 
-      <!-- <h1>Pomodoro Media Player</h1> -->
-      <video id="videoPlayer" loop muted playsinline>
-        <source src="assets/videoloop.mp4" type="video/mp4" />
-      </video>
+    <!-- Alert audio for session end -->
+    <audio id="alertAudio" src="assets/alert.wav"></audio>
 
-      <!-- Timer Display -->
-      <div class="timer-controls">
+    <div class="timer-controls">
+      <div class="ipod">
+        <!-- Screen for timer and video display -->
+        <div class="ipod-screen">
+          <h2 id="modeIndicator">Focus Time</h2>
+          <video id="videoPlayer" loop muted playsinline>
+            <source src="assets/videoloop.mp4" type="video/mp4" />
+          </video>
+          <div class="timer-display">
+            <h2 id="timer">25:00</h2>
+          </div>
+        </div>
+
+        <!-- User inputs for focus and break durations -->
         <div class="inputs">
-          <label for="focusInput">Focus (min):</label>
           <input type="number" id="focusInput" value="25" min="1" />
-
-          <label for="breakInput">Break (min):</label>
           <input type="number" id="breakInput" value="5" min="1" />
         </div>
 
-        <div class="timer-display">
-          <h2 id="timer">25:00</h2>
-        </div>
-
-        <div class="buttons">
-          <button id="startStopBtn">Start</button>
-          <button id="skipBtn">Skip 10s</button>
+        <!-- iPod-style control pad for timer interaction -->
+        <div class="ipod-control-pad">
+          <button class="control-button top">+</button>
+          <button class="control-button left">←</button>
+          <button class="control-button center">⏯</button>
+          <button class="control-button right">→</button>
+          <button class="control-button bottom">−</button>
         </div>
       </div>
     </div>
 
+    <!-- JavaScript for timer functionality -->
     <script src="script.js"></script>
   </body>
 </html>

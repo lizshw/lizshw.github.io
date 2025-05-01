@@ -1,33 +1,95 @@
+/* ----------- GENERAL LAYOUT & TYPOGRAPHY ----------- */
 body {
-  font-family: "Helvetica Neue", sans-serif;
-  background-color: #ff98e4;
-  color: #333;
+  font-family: "Quicksand", sans-serif; /* Soft, rounded sans-serif for friendly, modern aesthetic */
+  background-color: #ffe3f3; /* Light pink background reinforces the retro iPod Shuffle palette */
+  color: #3a003a; /* Deep plum for strong contrast and visual interest */
   margin: 0;
   padding: 20px;
   display: flex;
-  justify-content: center;
-}
-
-.container {
-  max-width: 700px;
-  width: 100%;
-  text-align: center;
-  background-color: #f300b4;
-  padding: 30px;
-  border-radius: 12px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  justify-content: center; /* Centers content horizontally on the page */
 }
 
 h1 {
   margin-bottom: 20px;
   font-size: 28px;
-  color: #222;
+  color: #222; /* Dark neutral for improved legibility */
 }
 
-video {
-  max-width: 100%;
-  margin-bottom: 25px;
+/* ----------- VIDEO STYLING ----------- */
+
+.ipod-screen {
+  background: #ffe8f7; /* Soft pastel screen background for a device-like look */
+  border: 4px solid black; /* Mimics physical device outlines */
+  border-radius: 12px; /* Rounded corners for a more organic feel */
+  padding: 1em;
+  width: 100%;
+  margin-bottom: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1em;
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.2); /* Inset glow gives screen a 'lit' feel */
 }
+
+.focusInput {
+  font-size: 35px;
+  font-weight: bold;
+  color: #5e0048;
+  background: #ffe0f5;
+  padding: 0.2em 1em;
+  border-radius: 10px;
+  box-shadow: inset 0 0 5px #fff; /* Subtle inner glow for a screen-text effect */
+}
+
+/* Container for video mode input + display */
+.top-display {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  gap: 10px;
+}
+
+/* Mode selector input */
+.top-display input[type="number"] {
+  width: 60px;
+  font-size: 20px;
+  border: 2px solid #f300b4; /* Hot pink to match theme */
+  border-radius: 6px;
+  padding: 5px;
+  text-align: center;
+}
+
+/* Mode description text */
+#modeIndicator {
+  margin: 0;
+  font-size: 30px;
+  font-weight: 600;
+  color: #8e004c; /* Deeper magenta tone for emphasis */
+}
+
+/* Video element styling */
+#videoPlayer {
+  width: 100%;
+  border: 2px solid black;
+  border-radius: 8px;
+  margin: 0;
+}
+
+/* Timer text shown below video */
+.timer-display h2 {
+  font-size: 32px;
+  margin: 5px;
+  padding: 0;
+  color: #ff008c;
+  font-weight: bold;
+  line-height: 1;
+  display: flex;
+  justify-content: center; /* Centers horizontally */
+  align-items: center; /* Centers vertically */
+}
+
+/* ----------- TIMER CONTROLS & DISPLAY ----------- */
 
 .timer-controls {
   display: flex;
@@ -40,32 +102,40 @@ video {
   display: flex;
   gap: 15px;
   align-items: center;
-  flex-wrap: wrap;
+  flex-wrap: wrap; /* Ensures responsive layout on smaller screens */
   justify-content: center;
 }
 
 label {
-  font-weight: 600;
+  font-weight: 600; /* Makes labels readable without being too heavy */
+}
+
+/* ----------- INPUT STYLING ----------- */
+
+/* Removes spinner arrows from number inputs in Chrome/Safari */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 
 input[type="number"] {
   width: 60px;
-  padding: 6px;
-  font-size: 16px;
+  padding: 8px;
+  font-size: 25px;
   text-align: center;
-  border: 1px solid #ccc;
-  border-radius: 6px;
+  border: 2px solid #f300b4; /* Consistent hot pink accent */
+  border-radius: 8px;
 }
 
-.timer-display h2 {
-  font-size: 48px;
-  margin: 10px 0;
-  color: #222;
-  letter-spacing: 1px;
+/* Highlighted state for inputs, e.g. when selected or active */
+input.selected {
+  border: 2px solid #8e004c; /* Slightly darker pink for distinction */
 }
 
+/* ----------- STANDARD BUTTON STYLING ----------- */
 .buttons button {
-  background-color: #0077cc;
+  background-color: #0077cc; /* Contrasts with pink for visibility */
   color: white;
   padding: 10px 20px;
   font-size: 16px;
@@ -77,5 +147,103 @@ input[type="number"] {
 }
 
 .buttons button:hover {
-  background-color: #005fa3;
+  background-color: #005fa3; /* Darker blue on hover for feedback */
+}
+
+/* ----------- iPOD CONTAINER ----------- */
+.ipod {
+  background: radial-gradient(
+    circle at top left,
+    #ffb4e6,
+    #ffa3e2
+  ); /* Gradient mimics plastic iPod shell */
+  padding: 3em 2em;
+  width: 35%; /* Responsive but fixed width to keep device form */
+  margin: 2em auto;
+  border: 4px solid #ff4ecb; /* Vivid magenta border for emphasis */
+  border-radius: 50px; /* Super-rounded for playful device feel */
+  box-shadow: inset -5px -5px 15px #ffd2f0, inset 5px 5px 15px #ff71c8,
+    0 8px 20px rgba(255, 0, 120, 0.25); /* Adds depth and shine to the shell */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.3s ease; /* Optional for hover effects */
+}
+
+/* ----------- iPOD CONTROL PAD ----------- */
+.ipod-control-pad {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  background: radial-gradient(
+    circle at center,
+    #ff90d8 0%,
+    #ff4ecb 100%
+  ); /* Pink-centered gradient to imply interactivity */
+  border-radius: 50%;
+  margin: 2rem auto;
+  box-shadow: inset 0 0 10px #ffb4e6, 0 4px 10px rgba(0, 0, 0, 0.2); /* Inset and drop shadow to look like physical surface */
+}
+
+/* Shared style for all control buttons */
+.control-button {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 2px solid #ff4ecb;
+  background-color: white;
+  font-size: 20px;
+  cursor: pointer;
+  user-select: none;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+}
+
+/* Top button (e.g., volume up or previous) */
+.control-button.top {
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Bottom button */
+.control-button.bottom {
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Left button */
+.control-button.left {
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* Right button */
+.control-button.right {
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* Center button - typically 'play' or 'select' */
+.control-button.center {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #ff4ecb;
+  color: white;
+  width: 60px;
+  height: 60px;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* ----------- MODE INDICATOR TEXT ----------- */
+#modeIndicator {
+  text-align: center;
+  font-weight: bold;
+  color: #333;
+  margin-top: 1rem;
 }
