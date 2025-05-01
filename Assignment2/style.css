@@ -2,7 +2,7 @@
 body {
   font-family: "Quicksand", sans-serif; /* Soft, rounded sans-serif for friendly, modern aesthetic */
   background-color: #ffe3f3; /* Light pink background reinforces the retro iPod Shuffle palette */
-  color: #3a003a; /* Deep plum for strong contrast and visual interest */
+  color: #c35186; /* Deep pink for strong contrast and visual interest */
   margin: 0;
   padding: 20px;
   display: flex;
@@ -19,7 +19,7 @@ h1 {
 
 .ipod-screen {
   background: #ffe8f7; /* Soft pastel screen background for a device-like look */
-  border: 4px solid black; /* Mimics physical device outlines */
+  border: 4px solid #c35186; /* Mimics physical device outlines */
   border-radius: 12px; /* Rounded corners for a more organic feel */
   padding: 1em;
   width: 100%;
@@ -34,7 +34,7 @@ h1 {
 .focusInput {
   font-size: 35px;
   font-weight: bold;
-  color: #5e0048;
+  color: #c35186;
   background: #ffe0f5;
   padding: 0.2em 1em;
   border-radius: 10px;
@@ -60,18 +60,10 @@ h1 {
   text-align: center;
 }
 
-/* Mode description text */
-#modeIndicator {
-  margin: 0;
-  font-size: 30px;
-  font-weight: 600;
-  color: #8e004c; /* Deeper magenta tone for emphasis */
-}
-
 /* Video element styling */
 #videoPlayer {
   width: 100%;
-  border: 2px solid black;
+  border: 4px solid #c35186;
   border-radius: 8px;
   margin: 0;
 }
@@ -81,7 +73,7 @@ h1 {
   font-size: 32px;
   margin: 5px;
   padding: 0;
-  color: #ff008c;
+  color: #c35186;
   font-weight: bold;
   line-height: 1;
   display: flex;
@@ -124,8 +116,9 @@ input[type="number"] {
   padding: 8px;
   font-size: 25px;
   text-align: center;
-  border: 2px solid #f300b4; /* Consistent hot pink accent */
+  border: 2px solid #c35186; /* Consistent deep pink accent */
   border-radius: 8px;
+  color: #c35186; /* Deeper pink tone for emphasis */
 }
 
 /* Highlighted state for inputs, e.g. when selected or active */
@@ -154,16 +147,16 @@ input.selected {
 .ipod {
   background: radial-gradient(
     circle at top left,
-    #ffb4e6,
-    #ffa3e2
+    #c35186,
+    #c35186
   ); /* Gradient mimics plastic iPod shell */
   padding: 3em 2em;
   width: 35%; /* Responsive but fixed width to keep device form */
   margin: 2em auto;
-  border: 4px solid #ff4ecb; /* Vivid magenta border for emphasis */
+  border: 4px solid #c35186; /* Deep pink border for emphasis */
   border-radius: 50px; /* Super-rounded for playful device feel */
-  box-shadow: inset -5px -5px 15px #ffd2f0, inset 5px 5px 15px #ff71c8,
-    0 8px 20px rgba(255, 0, 120, 0.25); /* Adds depth and shine to the shell */
+  box-shadow: inset -5px -5px 15px #ffb8d5, inset 5px 5px 15px #ff97d7,
+    0 8px 20px #ffb8d5; /* Adds depth and shine to the shell */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -177,8 +170,8 @@ input.selected {
   height: 200px;
   background: radial-gradient(
     circle at center,
-    #ff90d8 0%,
-    #ff4ecb 100%
+    #ffb8d5 0%,
+    #c35186 100%
   ); /* Pink-centered gradient to imply interactivity */
   border-radius: 50%;
   margin: 2rem auto;
@@ -191,7 +184,7 @@ input.selected {
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  border: 2px solid #ff4ecb;
+  border: 2px solid #c35186;
   background-color: white;
   font-size: 20px;
   cursor: pointer;
@@ -204,6 +197,7 @@ input.selected {
   top: 10px;
   left: 50%;
   transform: translateX(-50%);
+  color: #c35186; /* Deeper pink tone for emphasis */
 }
 
 /* Bottom button */
@@ -211,6 +205,7 @@ input.selected {
   bottom: 10px;
   left: 50%;
   transform: translateX(-50%);
+  color: #c35186; /* Deeper pink tone for emphasis */
 }
 
 /* Left button */
@@ -218,6 +213,7 @@ input.selected {
   left: 10px;
   top: 50%;
   transform: translateY(-50%);
+  color: #c35186; /* Deeper pink tone for emphasis */
 }
 
 /* Right button */
@@ -225,6 +221,7 @@ input.selected {
   right: 10px;
   top: 50%;
   transform: translateY(-50%);
+  color: #c35186; /* Deeper pink tone for emphasis */
 }
 
 /* Center button - typically 'play' or 'select' */
@@ -232,7 +229,7 @@ input.selected {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-color: #ff4ecb;
+  background-color: #c35186;
   color: white;
   width: 60px;
   height: 60px;
@@ -244,6 +241,14 @@ input.selected {
 #modeIndicator {
   text-align: center;
   font-weight: bold;
-  color: #333;
-  margin-top: 1rem;
+  color: #c35186; /* Deeper pink tone for emphasis */
+  margin: 0;
 }
+
+/* ----------- INSPIRATION & NOSTALGIA ----------- */
+
+/* The design draws inspiration from the iconic iPod Shuffle, a nostalgic piece of tech from the early 2000s. The use of 
+   soft pastel pinks, gradients, and rounded shapes recalls the playful, minimalist aesthetic that made the iPod a cultural icon. 
+   The hot pink color scheme is not only bold and energetic but also used in many retro tech accessories (including the ipod), giving the interface a 
+   fun and inviting vibe. This "cute" factor encourages users to engage with the app and feel a sense of warmth and familiarity, 
+   just like the iPod Shuffle did for its users. It's designed to evoke feelings of nostalgia while still feeling modern and playful. */

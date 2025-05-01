@@ -45,6 +45,7 @@ function switchMode() {
     video.pause();
     audio1.pause();
     audio2.play();
+    modeIndicator.textContent = "Break Time";
   }
 }
 
@@ -89,7 +90,6 @@ function startTimer() {
     clearInterval(timerInterval);
     video.pause();
     audio1.pause();
-    //audio2.play();
   }
 }
 
