@@ -1,0 +1,33 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: #f5f0eb;
+  overflow: hidden;
+}
+
+canvas {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+
+#regenButton {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  padding: 10px 16px;
+  background: #ddd0c8;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-family: sans-serif;
+  color: #333;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+  z-index: 10;
+  transition: background 0.3s;
+}
+
+#regenButton:hover {
+  background: #e9e0d8;
+}
